@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <title>Contact Us</title>
+ <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<header class="navbar">
+<img src="images/logo-light.png" alt="" class="logo" height="80px" width="80px" id="logo">
+  <nav id="nav-menu">
+    <a href="index.html" >Home</a>
+    <a href="About.html">About Us</a>
+    <a href="Projects.html">Projects</a>
+    <a href="Impact.html">Impact</a>
+    <a href="GetInvolved.html">Get Involved</a>
+    <a href="Contact.html" class="active">Contact</a>
+  <a href="Contact.html"><button class="donate-btn">Donate Now</button></a>
+  </nav>
+
+  <!-- Hamburger -->
+     <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <p class="small-title">GET IN TOUCH</p>
+    <h1>Let's build something great together</h1>
+    <p class="subtitle">
+       We'd love to hear from you. Whether you have questions, want to get involved,
+       or just want to learn more about our work, we're here to help.
+    </p>
+</section>
+
+<!-- CONTACT CARDS -->
+<section class="contact-cards">
+  <div class="card">
+    <div class="icon blue"><i class="fa-regular fa-envelope"></i></div>
+    <h3>Email Us</h3>
+    <p>Send us a message anytime</p>
+    <span>brightimpactcommunity.org</span>
+  </div>
+
+  <div class="card">
+    <div class="icon blue"><i class="fa-solid fa-phone"></i></div>
+    <h3>Call Us</h3>
+    <p>We're available to talk</p>
+    <span>+237 676-507-394</span>
+  </div>
+
+  <div class="card">
+    <div class="icon purple"><i class="fa-solid fa-location-dot"></i></div>
+    <h3>Visit Us</h3>
+    <p>Come see us in person</p>
+    <span>Bafoussam, Cameroon</span>
+  </div>
+</section>
+
+<!-- MAIN SECTION -->
+<section class="contact-main">
+
+  <!-- FORM -->
+   <form id="contact-form" action="https://formspree.io/f/xpqovdpn" method="POST">
+    <input type="hidden" name="inquiry_type" id="inquiry-type">
+  <div class="form-box">
+    <h2>Send Us a Message</h2>
+
+    <div class="options">
+      <button type="button"><i class="fa-solid fa-user-group fa-xl" style="color: rgb(0, 0, 0);"></i> I want to volunteer</button>
+      <button type="button"><i class="fa-solid fa-paper-plane fa-xl" style="color: rgb(0, 0, 0);"></i> I want to make a donation</button>
+      <button type="button"><i class="fa-solid fa-message fa-xl" style="color: rgb(0, 0, 0);"></i> Partnership inquiry</button>
+      <button type="button"><i class="fa-solid fa-envelope fa-xl" style="color: rgb(0, 0, 0);"></i> General question</button>
+    </div>
+
+    <input type="text" placeholder="Your Name" name="name" required>
+    <input type="email" placeholder="Your Email" name="email" required>
+    <input type="text" placeholder="Subject" name="Subject" required>
+    <textarea name="message" placeholder="Tell us more about your inquiry..." required></textarea>
+
+    <button type="submit" id="submit-btn" class="send-btn">
+      <i class="fa-solid fa-paper-plane"></i> Send Message
+    </button>
+  </div>
+  </form>
+
+  <!-- RIGHT SIDE -->
+  <div class="right-box">
+
+    <div class="office">
+      <h3><i class="fa-regular fa-clock"></i> Office Hours</h3>
+      <p>Monday - Friday: <span>8:00 AM - 5:00 PM</span></p>
+      <p>Saturday: <span>9:00 AM - 2:00 PM</span></p>
+      <p>Sunday: <span>Closed</span></p>
+    </div>
+
+    <div class="answers">
+      <h3>Quick Answers</h3>
+      <p><strong>How can I volunteer?</strong></p>
+      <p>Visit our <a href="GetInvolved.html">Get Involved page</a> to see current opportunities.</p>
+
+      <p><strong>How do I make a donation?</strong></p>
+      <p>We accept donations through our <a href="GetInvolved.html">Get Involved page</a>.</p>
+
+      <p><strong>Can I visit your projects?</strong></p>
+      <p>Yes! We welcome visitors to see our work firsthand. Please contact Us in advance to arrange a visit.</p>
+    </div>
+
+    <div class="social">
+      <h3>Stay Connected</h3>
+      <p>Follow us on social media and subscribe to our newsletter.</p>
+
+      <div class="social-btns">
+        <button><a href="https://web.facebook.com/profile.php?id=61586969045742" target="_blank">Facebook</a></button>
+        <button><a href="https://x.com/" target="_blank">Twitter</a></button>
+        <button><a href="https://www.instagram.com/bright_impact_community/" target="_blank">Instagram</a></button>
+        <button><a href="https://www.linkedin.com/company/108953116/admin/dashboard/" target="_blank">LinkedIn</a></button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Bright Impact Community</h3>
+        <p>
+          Empowering communities through clean water, hygiene education,
+          and environmental sustainability since 2024.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="Impact.html">Impact</a></li>
+          <li><a href="GetInvolved.html">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Our Programs</h4>
+        <ul>
+          <li><a href="Projects.html">Clean Water Access</a></li>
+          <li><a href="Projects.html">Hygiene Education</a></li>
+          <li><a href="Projects.html">Environmental Action</a></li>
+          <li><a href="Projects.html">Community Workshops</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="contact-list">
+          <li><i class="fa-regular fa-envelope"></i> brightimpactcommunity.org</li>
+          <li><i class="fa-solid fa-phone"></i> +237 676-507-394</li>
+          <li><i class="fa-solid fa-location-dot"></i> Bafoussam, Cameroon</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bright Impact Community. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+<script src="contact.js"></script>
+</body>
+</html>
