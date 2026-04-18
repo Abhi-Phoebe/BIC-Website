@@ -133,7 +133,7 @@ nav {
 /* HERO */
 .hero {
   min-height: 100vh;
-  background: url('images/bp2.png');
+  background: url('bp2.png');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
