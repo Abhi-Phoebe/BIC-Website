@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     toggleBtn.textContent = "☀️";
-    if (logo) logo.src = "images/logo-dark.png";
+    if (logo) logo.src = "logo-dark.png";
   }
 
   toggleBtn.addEventListener("click", () => {
@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.body.classList.contains("dark-mode")) {
       localStorage.setItem("theme", "dark");
       toggleBtn.textContent = "☀️";
-      if (logo) logo.src = "images/logo-dark.png";
+      if (logo) logo.src = "logo-dark.png";
     } else {
       localStorage.setItem("theme", "light");
       toggleBtn.textContent = "🌙";
-      if (logo) logo.src = "images/logo-light.png";
+      if (logo) logo.src = "logo-light.png";
     }
   });
 }
