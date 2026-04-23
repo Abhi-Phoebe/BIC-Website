@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+     window.addEventListener("scroll", () => {
+  if (nav.classList.contains("active")) {
+    nav.classList.remove("active");
+  }
+});
+
   // DARK MODE
   const toggleBtn = document.getElementById("theme-toggle");
   const logo = document.getElementById("logo");
