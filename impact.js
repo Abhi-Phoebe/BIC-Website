@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-     window.addEventListener("scroll", () => {
-  if (nav.classList.contains("active")) {
-    nav.classList.remove("active");
+  window.addEventListener("scroll", () => {
+  if (navMenu && navMenu.classList.contains("active")) {
+    navMenu.classList.remove("active");
   }
 });
 
