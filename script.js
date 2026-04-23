@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+     window.addEventListener("scroll", () => {
+  if (nav.classList.contains("active")) {
+    nav.classList.remove("active");
+  }
+});
+
   if (toggleBtn) {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
