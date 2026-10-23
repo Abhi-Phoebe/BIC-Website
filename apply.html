@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="apply.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+    <title>Application</title>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<header class="navbar">
+<img src="images/logo-light.png" alt="" class="logo" height="75px" width="75px" id="logo">
+  <nav id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="About.html">About Us</a>
+    <a href="Projects.html" class="active">Programs</a>
+    <a href="Impact.html">Impact</a>
+    <a href="GetInvolved.html">Get Involved</a>
+    <a href="Contact.html">Contact</a>
+  <a href="Contact.html"><button class="donate-btn">Donate Now</button></a>
+  </nav>
+
+  <!-- Hamburger -->
+     <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <p class="small-title">APPLY</p>
+    <h1 id="apply-title">Application</h1>
+    <p class="subtitle" id="apply-sub"></p>
+</section>
+
+<!-- FORM -->
+<section class="apply-wrap">
+  <div class="apply-card" id="apply-root"></div>
+</section>
+
+ <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Bright Impact Community</h3>
+        <p>
+          Empowering communities through clean water, hygiene education,
+          and environmental sustainability since 2024.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Projects.html">Programs</a></li>
+          <li><a href="Impact.html">Impact</a></li>
+          <li><a href="GetInvolved.html">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Our Programs</h4>
+        <ul>
+          <li><a href="Projects.html#youth-action">Youth Action Program</a></li>
+          <li><a href="Projects.html#community-outreach">Community Outreach</a></li>
+          <li><a href="Projects.html#back-to-school">Back-to-School Support</a></li>
+          <li><a href="Projects.html#green-communities">Green Communities</a></li>
+          <li><a href="Projects.html#special-projects">Special Projects</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="contact-list">
+          <li><i class="fa-regular fa-envelope"></i> brightimpactcommunity.org</li>
+          <li><i class="fa-solid fa-phone"></i> +237 676-507-394</li>
+          <li><i class="fa-solid fa-location-dot"></i> Bafoussam, Cameroon</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bright Impact Community. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+<script src="programs-config.js"></script>
+<script src="forms-data.js"></script>
+<script src="projects.js"></script>
+<script src="apply.js"></script>
+
+</body>
+</html>

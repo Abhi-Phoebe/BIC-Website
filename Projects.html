@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="projects.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
 
-    <title>Projects</title>
+    <title>Programs</title>
     <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -18,15 +18,16 @@
 
   <!-- NAVBAR -->
 <header class="navbar">
-<img src="logo-light.png" alt="" class="logo" height="75px" width="75px" id="logo">
+<img src="images/logo-light.png" alt="" class="logo" height="75px" width="75px" id="logo">
   <nav id="nav-menu">
     <a href="index.html">Home</a>
     <a href="About.html">About Us</a>
-    <a href="Projects.html" class="active">Projects</a>
+    <a href="Projects.html" class="active">Programs</a>
     <a href="Impact.html">Impact</a>
+    <a href="Insights.html">Insights</a>
     <a href="GetInvolved.html">Get Involved</a>
     <a href="Contact.html">Contact</a>
-  <a href="Contact.html"><button class="donate-btn">Donate Now</button></a>
+  <a href="https://dodonate.org/donate/brightimpactcommunity" target="_blank" rel="noopener"><button class="donate-btn">Donate Now</button></a>
   </nav>
 
   <!-- Hamburger -->
@@ -46,93 +47,307 @@
     </p>
 </section>
 
-<!--Projects-->
-  <!-- PROJECT 1 -->
-<section class="project">
-  <div class="project-img">
-    <img src="clean water2.png" alt="Clean Water">
-  </div>
+<!-- PROGRAM CARDS -->
+<section class="programs-grid">
 
-  <div class="project-text">
-    <div class="icon"><i class="fa-solid fa-droplet fa-2xl" style="color: rgb(116, 192, 252);"></i></div>
-    <h2>Clean Water Initiative</h2>
-    <p>
-      Providing safe and accessible drinking water to underserved communities. Teaching them about water purification methods and how to save water properly for long-term use.
-    </p>
-    <ul>
-      <li>Water filtration systems</li>
-      <li>Community boreholes</li>
-      <li>Water safety education</li>
-      <li>Maintenance training</li>
-    </ul>
-  </div>
+  <article class="program-card" id="youth-action">
+    <img class="card-bg" src="images/program-youth-action.svg" alt="BIC Youth Action Program">
+    <div class="card-overlay">
+      <span class="status-badge" data-program="youth-action"></span>
+      <h2>BIC Youth Action Program</h2>
+      <p class="card-meta">
+        <span><i class="fa-solid fa-tag"></i> Youth Leadership & Community Service</span>
+        <span><i class="fa-regular fa-clock"></i> November–July</span>
+      </p>
+      <button class="donate-btn learn-more" data-program="youth-action">Learn More</button>
+    </div>
+  </article>
+
+  <article class="program-card" id="community-outreach">
+    <img class="card-bg" src="images/program-community-outreach.svg" alt="BIC Community Outreach">
+    <div class="card-overlay">
+      <span class="status-badge" data-program="community-outreach"></span>
+      <h2>BIC Community Outreach</h2>
+      <p class="card-meta">
+        <span><i class="fa-solid fa-tag"></i> Community Service</span>
+        <span><i class="fa-regular fa-clock"></i> Year-round (major focus in May)</span>
+      </p>
+      <button class="donate-btn learn-more" data-program="community-outreach">Learn More</button>
+    </div>
+  </article>
+
+  <article class="program-card" id="back-to-school">
+    <img class="card-bg" src="images/program-back-to-school.svg" alt="BIC Back-to-School Support">
+    <div class="card-overlay">
+      <span class="status-badge" data-program="back-to-school"></span>
+      <h2>BIC Back-to-School Support</h2>
+      <p class="card-meta">
+        <span><i class="fa-solid fa-tag"></i> Educational Support</span>
+        <span><i class="fa-regular fa-clock"></i> Main activity in August</span>
+      </p>
+      <button class="donate-btn learn-more" data-program="back-to-school">Learn More</button>
+    </div>
+  </article>
+
+  <article class="program-card" id="green-communities">
+    <img class="card-bg" src="images/program-green-communities.svg" alt="BIC Green Communities Program">
+    <div class="card-overlay">
+      <span class="status-badge" data-program="green-communities"></span>
+      <h2>BIC Green Communities Program</h2>
+      <p class="card-meta">
+        <span><i class="fa-solid fa-tag"></i> Environmental Action</span>
+        <span><i class="fa-regular fa-clock"></i> June–July (ongoing focus)</span>
+      </p>
+      <button class="donate-btn learn-more" data-program="green-communities">Learn More</button>
+    </div>
+  </article>
+
+  <article class="program-card" id="special-projects">
+    <img class="card-bg" src="images/program-special-projects.svg" alt="BIC Special Projects">
+    <div class="card-overlay">
+      <span class="status-badge" data-program="special-projects"></span>
+      <h2>BIC Special Projects</h2>
+      <p class="card-meta">
+        <span><i class="fa-solid fa-tag"></i> Special Initiatives</span>
+        <span><i class="fa-regular fa-clock"></i> As opportunities arise</span>
+      </p>
+      <button class="donate-btn learn-more" data-program="special-projects">Learn More</button>
+    </div>
+  </article>
 </section>
 
-<!-- PROJECT 2 -->
-<section class="project reverse">
-  <div class="project-img">
-    <img src="hygiene kits.png" alt="Hygiene Kits">
-  </div>
-
-  <div class="project-text">
-    <div class="icon"><i class="fa-solid fa-soap fa-2xl" style="color: rgb(252, 116, 231);"></i></div>
-    <h2>Hygiene Kits Distribution</h2>
-    <p>
-      Distributing hygiene kits to underserved populations and orphans, and educating families on proper hygiene and sanitation practices.
+<!-- PROGRAM DETAIL VIEWS (shown in a pop-up when someone clicks Learn More) -->
+<article class="program-detail" id="detail-youth-action" hidden>
+    <p class="detail-commit"><strong>DO NOT APPLY IF YOU WILL NOT COMMIT; PLEASE DO NOT.</strong></p>
+    <img class="detail-img" src="images/program-youth-action.svg" alt="BIC Youth Action Program">
+    <h2>BIC Youth Action Program</h2>
+    <p class="program-meta">
+      <strong>Duration:</strong> November–July<br>
+      <strong>Target participants:</strong> African youth aged 15–20<br>
+      <strong>Program type:</strong> Youth leadership and community action
     </p>
-
+    <h3>Program Overview</h3>
+    <p>The BIC Youth Action Program empowers young Africans to identify and address challenges in their communities related to clean water, hygiene and sanitation, waste management, and environmental sustainability.</p>
+    <p>Throughout the program, participants take action within their own communities through awareness campaigns, community service, educational activities, and practical initiatives that support BIC's mission.</p>
+    <p>Rather than simply learning about these issues, participants are encouraged to become active changemakers who turn their ideas into meaningful community action.</p>
+    <h3>Activities & Timeline</h3>
     <ul>
-      <li>Soap, sanitizer & hygiene supplies</li>
-      <li>Sanitation education workshops</li>
-      <li>School hygiene programs</li>
-      <li>Orphanage outreach partnerships</li>
+      <li><b><i>November 30:</i></b> Youth orientation and program introduction.</li>
+      <li>December: Clean Water Action</li>
+      <li>January: Hygiene & Sanitation Action</li>
+      <li>February: Waste management Action</li>
+      <li>March: Environmental sustainability Action</li>
+      <li>April: From Problem to Solution Innovation Workshop</li>
+      <li>May: Community Action </li>
+      <li>June: Youth Advocacy & Leadership</li>
+      <li>July: Impact & Graduation</li>
+      <br>
+      <p><b>Note:</b> <i><b>At the beginning of each month,</b> participants will attend a mentorship meeting to learn more about the month's activities and how to carry them out. 
+        <b>At the end of each month,</b> participants will submit an activity report with supporting evidence, such as photos and social media posts, followed by a review meeting. 
+        Participants should plan for approximately <b>4 hours of scheduled meetings per month,</b> in addition to flexible time for community activities and project implementation</i></p>
     </ul>
-  </div>
-</section>
+    <h3>Eligibility &amp; Requirements</h3>
+    <ul>
+      <li>Be between <b>15 and 20 years</b> old at the time of application.</li>
+      <li>Be an <b>African citizen.</b></li>
+      <li>Be willing and able to commit to the full program duration</li>
+      <li>Commit to <b>4 hours per month</b> for meetings, plus <b>flexible hours</b> to carry out your community activities.</li>
+      <li>Demonstrate an interest in community service, environmental sustainability & public health education.</li>
+      <li>Have access to a community where you can carry out activities</li>
+      <li>Be willing to participate in program activities, submit progress updates monthly, and report on your community impact.</li>
+    </ul>
+    <h3>What You Will Gain</h3>
+    <ul>
+      <li>A certificate of participation, subject to meeting the program's completion requirements.</li>
+      <li>Awards and recognition for the best community projects.</li>
+      <li>Funding support for outstanding projects, where available (funding is not guaranteed).</li>
+      <li>Hands-on experience planning and leading a real community project.</li>
+      <li>Leadership, public speaking, teamwork, communication, and problem-solving skills.</li>
+      <li>Guidance and mentorship from the BIC team.</li>
+      <li>Practical knowledge of clean water, hygiene, sanitation, waste management, and environmental sustainability.</li>
+      <li>A network of young changemakers who share your passion for community impact.</li>
+      <li>The opportunity to have your project and story featured in BIC communications, with your consent.</li>
+      <li>A stronger profile for future scholarships, internships, and leadership opportunities.</li>
+    </ul>
+    <h3>Application Status</h3>
+    <div class="detail-apply" data-program="youth-action"></div>
+</article>
 
-<!-- PROJECT 3 -->
-<section class="project">
-  <div class="project-img">
-    <img src="hero-community.jpg" alt="Environment">
-  </div>
-
-  <div class="project-text">
-    <div class="icon"><i class="fa-brands fa-pagelines fa-2xl" style="color: rgb(99, 230, 190);"></i></div>
-    <h2>Environmental Awareness</h2>
-    <p>
-      Promoting clean environments through education and community action. Organizing clean-up campaigns, tree planting campaigns, workshops.
+<article class="program-detail" id="detail-community-outreach" hidden>
+    <img class="detail-img" src="images/program-community-outreach.svg" alt="BIC Community Outreach">
+    <h2>BIC Community Outreach</h2>
+    <p class="program-meta">
+      <strong>Schedule:</strong> Year-round, with periodic outreach activities and a major annual focus in May.<br>
+      <strong>Program type:</strong> Community service and family support
     </p>
-
+    <h3>Program Overview</h3>
+    <p>BIC Community Outreach brings <b>Volunteers</b> into underserved communities to support families through essential donations and practical education.</p>
+    <p>Through community visits, we aim to help families improve their understanding and everyday practices related to clean water, hygiene, sanitation, and proper waste management.</p>
+    <p>Activities may include distributing essential supplies, demonstrating safe hygiene practices, educating families about water safety, and promoting responsible waste disposal.</p>
+    <h3>Activities</h3>
     <ul>
-      <li>Community clean-up campaigns</li>
-      <li>Tree planting initiatives</li>
-      <li>Environmental education</li>
-      <li>Waste management awareness</li>
+      <li>Visits to underserved families and communities.</li>
+      <li>Distribution of essential supplies and donations.</li>
+      <li>Clean water and safe water storage education.</li>
+      <li>Hygiene and sanitation awareness.</li>
+      <li>Household waste-management education.</li>
+      <li>Community engagement and follow-up activities.</li>
     </ul>
-  </div>
-</section>
+    <h3>Eligibility &amp; Requirements</h3>
+    <ul>
+      <li>Be living in Cameroon.</li>
+      <li>Be willing to commit to the responsibilities assigned to you.</li>
+      <li>Be available on the dates of the outreach activity.</li>
+      <li>Apply as an individual or as a representative of an organization.</li>
+      <li>Volunteers are selected for each activity, and applications open only when BIC needs additional volunteers.</li>
+    </ul>
+    <h3>What You Will Gain</h3>
+    <ul>
+      <li>A certificate of volunteer participation, subject to completing your assigned responsibilities.</li>
+      <li>Hands-on experience in community outreach and family engagement.</li>
+      <li>Skills in communication, teamwork, planning, and community education.</li>
+      <li>Practical knowledge of clean water, hygiene, sanitation, and waste management.</li>
+      <li>The chance to make a real difference in the lives of underserved families.</li>
+      <li>Connections with other volunteers and community-minded organizations.</li>
+      <li>Recognition for your contribution to BIC's work.</li>
+    </ul>
+    <h3>Application Status</h3>
+    <div class="detail-apply" data-program="community-outreach"></div>
+</article>
 
-<!-- PROJECT 4 -->
-<section class="project reverse">
-  <div class="project-img">
-    <img src="Community discussion in rural village.png" alt="Workshops">
-  </div>
-
-  <div class="project-text">
-    <div class="icon"><i class="fa-solid fa-user-group fa-2xl" style="color: rgb(242, 224, 159);"></i></div>
-    <h2>Workshops & Community Gatherings</h2>
-    <p>
-      We gather underserved communities, youths, parents, and teachers to talk about hygiene, clean water, and proper waste disposal.
+<article class="program-detail" id="detail-back-to-school" hidden>
+    <img class="detail-img" src="images/program-back-to-school.svg" alt="BIC Back-to-School Support">
+    <h2>BIC Back-to-School Support</h2>
+    <p class="program-meta">
+      <strong>Schedule:</strong> Year-round planning, with the main annual activity in August.<br>
+      <strong>Program type:</strong> Educational support and community outreach
     </p>
-
+    <h3>Program Overview</h3>
+    <p>BIC Back-to-School Support aims to assist children from underserved communities and orphanages as they prepare for a new academic year.</p>
+    <p>Through the distribution of school supplies and educational outreach, the program seeks to help children begin the school year better equipped while encouraging healthy everyday practices.</p>
+    <p>Alongside school supply donations, children will receive age-appropriate education on clean water, hygiene, sanitation, and proper waste management. The goal is to encourage them to apply these lessons at school, at home, and throughout the academic year.</p>
+    <h3>Activities</h3>
     <ul>
-      <li>Youth empowerment sessions</li>
-      <li>Parent & teacher training</li>
-      <li>Water contamination prevention</li>
-      <li>Disease prevention education</li>
+      <li>Distribution of school supplies to children in underserved communities and orphanages.</li>
+      <li>Collection of school materials through donation drives.</li>
+      <li>Visits to selected schools, orphanages, and communities.</li>
+      <li>Hygiene and sanitation awareness sessions.</li>
+      <li>Education on safe water practices.</li>
+      <li>Waste-management and environmental awareness activities.</li>
     </ul>
+    <h3>Eligibility &amp; Requirements</h3>
+    <ul>
+      <li>Be living in Cameroon.</li>
+      <li>Be willing to commit to the responsibilities assigned to you.</li>
+      <li>Be available during the preparation and distribution period, mainly ahead of and during August.</li>
+      <li>Apply as an individual or as a representative of an organization.</li>
+      <li>Volunteers are selected for each activity, and applications open only when BIC needs additional volunteers.</li>
+    </ul>
+    <h3>What You Will Gain</h3>
+    <ul>
+      <li>A certificate of volunteer participation, subject to completing your assigned responsibilities.</li>
+      <li>Hands-on experience in donation drives, logistics, and distribution.</li>
+      <li>Experience teaching children about hygiene, sanitation, and safe water practices.</li>
+      <li>Skills in teamwork, organization, communication, and fundraising.</li>
+      <li>The joy of helping children start the school year better equipped.</li>
+      <li>Connections with other volunteers, schools, and orphanages.</li>
+      <li>Recognition for your contribution to BIC's work.</li>
+    </ul>
+    <h3>Application Status</h3>
+    <div class="detail-apply" data-program="back-to-school"></div>
+</article>
+
+<article class="program-detail" id="detail-green-communities" hidden>
+    <img class="detail-img" src="images/program-green-communities.svg" alt="BIC Green Communities Program">
+    <h2>BIC Green Communities Program</h2>
+    <p class="program-meta">
+      <strong>Main annual activity period:</strong> June–July<br>
+      <strong>Ongoing focus:</strong> Environmental sustainability throughout the year.<br>
+      <strong>Geographic focus:</strong> Communities across multiple regions of Cameroon, depending on available resources and local partnerships.
+    </p>
+    <h3>Program Overview</h3>
+    <p>The BIC Green Communities Program promotes environmental sustainability by mobilizing young people and community members to take practical action toward cleaner, greener, and more sustainable communities.</p>
+    <p>While June and July will be the main periods for coordinated activities, environmental awareness and community engagement will remain an ongoing focus throughout the year.</p>
+    <p>BIC aims to expand these activities across as many regions of Cameroon as resources, partnerships, and volunteer capacity allow.</p>
+    <h3>Activities</h3>
+    <ul>
+      <li>Community clean-up campaigns.</li>
+      <li>Tree-planting initiatives.</li>
+      <li>Waste collection and responsible disposal awareness.</li>
+      <li>Environmental education in schools and communities.</li>
+      <li>Distribution of environmental awareness posters and flyers.</li>
+      <li>Public awareness campaigns promoting cleaner communities.</li>
+      <li>Youth-led environmental projects.</li>
+      <li>Community engagement to encourage sustainable everyday practices.</li>
+    </ul>
+    <h3>Eligibility &amp; Requirements</h3>
+    <ul>
+      <li>Be living in Cameroon.</li>
+      <li>Be willing to commit to the responsibilities assigned to you.</li>
+      <li>Be available on the dates of the campaign you volunteer for.</li>
+      <li>Apply as an individual or as a representative of an organization.</li>
+      <li>Volunteers are selected for each activity, and applications open only when BIC needs additional volunteers.</li>
+    </ul>
+    <h3>What You Will Gain</h3>
+    <ul>
+      <li>A certificate of volunteer participation, subject to completing your assigned responsibilities.</li>
+      <li>Hands-on experience in clean-ups, tree planting, and environmental campaigns.</li>
+      <li>Skills in environmental education, teamwork, communication, and campaign planning.</li>
+      <li>Practical knowledge of waste management and environmental sustainability.</li>
+      <li>The chance to leave your community cleaner and greener.</li>
+      <li>Connections with other environmentally minded volunteers and partners.</li>
+      <li>Recognition for your contribution to BIC's work.</li>
+    </ul>
+    <h3>Application Status</h3>
+    <div class="detail-apply" data-program="green-communities"></div>
+</article>
+
+<article class="program-detail" id="detail-special-projects" hidden>
+    <img class="detail-img" src="images/program-special-projects.svg" alt="BIC Special Projects">
+    <h2>BIC Special Projects</h2>
+    <p class="program-meta">
+      <strong>Schedule:</strong> As opportunities arise.<br>
+      <strong>Program type:</strong> Grant-funded, partner-supported, or specially organized initiatives.
+    </p>
+    <h3>Program Overview</h3>
+    <p>In addition to its regular programs, Bright Impact Community undertakes special projects that respond to emerging community needs and opportunities for collaboration.</p>
+    <p>These projects may be supported by grants, partnerships, donations, or other funding opportunities. Each special project will have its own objectives, activities, implementation period, and participation requirements.</p>
+    <h3>What each special project announcement includes</h3>
+    <ul>
+      <li>Project name and description.</li>
+      <li>Objectives and planned activities.</li>
+      <li>Location and implementation period.</li>
+      <li>Funding or partnership information, where appropriate.</li>
+      <li>Volunteer eligibility requirements.</li>
+      <li>Application opening and closing dates.</li>
+    </ul>
+    <h3>Eligibility &amp; Requirements</h3>
+    <ul>
+      <li>Be living in Cameroon.</li>
+      <li>Be willing to commit to the responsibilities assigned to you.</li>
+      <li>Meet any additional requirements announced for the specific project.</li>
+      <li>Apply as an individual or as a representative of an organization.</li>
+    </ul>
+    <h3>What You Will Gain</h3>
+    <ul>
+      <li>A certificate of volunteer participation, subject to completing your assigned responsibilities.</li>
+      <li>Experience working on grant-funded or partner-supported projects.</li>
+      <li>Skills in project coordination, teamwork, and community engagement.</li>
+      <li>The opportunity to work with BIC's partners and supporters.</li>
+      <li>The chance to contribute to a project that responds to a real community need.</li>
+      <li>Recognition for your contribution to BIC's work.</li>
+    </ul>
+    <h3>Application Status</h3>
+    <div class="detail-apply" data-program="special-projects"></div>
+</article>
+
+<!-- DETAIL POP-UP -->
+<div class="program-modal" id="program-modal" hidden>
+  <div class="program-modal-box" role="dialog" aria-modal="true" aria-label="Program details">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
   </div>
-</section>
+</div>
 
  <!-- FOOTER -->
   <footer class="footer">
@@ -150,8 +365,9 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="About.html">About Us</a></li>
-          <li><a href="Projects.html">Projects</a></li>
+          <li><a href="Projects.html">Programs</a></li>
           <li><a href="Impact.html">Impact</a></li>
+          <li><a href="Insights.html">Insights</a></li>
           <li><a href="GetInvolved.html">Get Involved</a></li>
         </ul>
       </div>
@@ -159,17 +375,18 @@
       <div>
         <h4>Our Programs</h4>
         <ul>
-          <li><a href="Projects.html">Clean Water Access</a></li>
-          <li><a href="Projects.html">Hygiene Education</a></li>
-          <li><a href="Projects.html">Environmental Action</a></li>
-          <li><a href="Projects.html">Community Workshops</a></li>
+          <li><a href="Projects.html#youth-action">Youth Action Program</a></li>
+          <li><a href="Projects.html#community-outreach">Community Outreach</a></li>
+          <li><a href="Projects.html#back-to-school">Back-to-School Support</a></li>
+          <li><a href="Projects.html#green-communities">Green Communities</a></li>
+          <li><a href="Projects.html#special-projects">Special Projects</a></li>
         </ul>
       </div>
 
       <div>
         <h4>Contact Us</h4>
         <ul class="contact-list">
-          <li><i class="fa-regular fa-envelope"></i> brightimpactcommunity.org</li>
+          <li><i class="fa-regular fa-envelope"></i> brightimpactcommunity@gmail.com</li>
           <li><i class="fa-solid fa-phone"></i> +237 676-507-394</li>
           <li><i class="fa-solid fa-location-dot"></i> Bafoussam, Cameroon</li>
         </ul>
@@ -185,7 +402,8 @@
   <button id="backToTop" class="back-to-top" aria-label="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
-  
+
+<script src="programs-config.js"></script>
 <script src="projects.js"></script>
 
 </body>

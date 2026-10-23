@@ -34,6 +34,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* NAVBAR */
 .logo {
   white-space: nowrap;
@@ -859,5 +863,19 @@ body.dark-mode .menu-toggle {
     right: 14px;
     width: auto;
     top: 78px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar nav a {
+    font-size: 1rem;
+  }
+
+  nav {
+    gap: 10px;
   }
 }

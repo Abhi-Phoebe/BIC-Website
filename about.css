@@ -487,3 +487,17 @@ body.dark-mode .icon {
     font-size: 2rem;
   }
 }
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar nav a {
+    font-size: 1rem;
+  }
+
+  nav {
+    gap: 10px;
+  }
+}
