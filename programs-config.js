@@ -24,7 +24,7 @@ const BIC_PROGRAMS = {
     name: "BIC Youth Action Program",
     status: "auto",
     opens: "2026-10-24",
-    closes: "2026-11-14",
+    closes: "2026-11-20",
     applyLabel: "Apply Now",
     form: "apply.html?program=youth-action"
   },
