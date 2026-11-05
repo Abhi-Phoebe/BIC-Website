@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nav = document.getElementById("nav-menu");
   const toggleBtn = document.getElementById("theme-toggle");
   const backToTop = document.getElementById("backToTop");
-  const cards = document.querySelectorAll(".card, .value-card");
+  const cards = document.querySelectorAll(".card, .value-card, .team-card");
   const logo = document.getElementById("logo");
 
   if (menuToggle && nav) {

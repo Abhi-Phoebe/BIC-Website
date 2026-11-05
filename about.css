@@ -261,19 +261,130 @@ body.dark-mode .values h2 {
   align-items: center;
   margin: auto auto 15px;
 }
+/* MEET THE TEAM */
+.team {
+  text-align: center;
+  padding: 60px 20px 80px;
+}
+
+.team h2 {
+  font-size: 40px;
+  color: #1d6fa5;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body.dark-mode .team h2 {
+  color: #69c8f0;
+}
+
+.team-sub {
+  margin-bottom: 40px;
+  color: var(--subtitle-color);
+}
+
+.team-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  width: 280px;
+  padding: 30px 24px;
+  border-radius: 20px;
+  background: var(--card-color);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #d9edf7;
+  margin-bottom: 16px;
+}
+
+.team-card h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+}
+
+.team-role {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.team-bio {
+  color: var(--subtitle-color);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.team-socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.team-socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: #edf7fb;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.team-socials a:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+body.dark-mode .team {
+  background: #0d1b2a;
+}
+
+body.dark-mode .team-card {
+  background: #14283c;
+}
+
+body.dark-mode .team-socials a {
+  background: #163244;
+  color: #69c8f0;
+}
+
 /*Animations*/
 /* REVEAL ANIMATION */
 .card,
-.value-card {
+.value-card,
+.team-card {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.6s ease;
 }
 
 .card.show,
-.value-card.show {
+.value-card.show,
+.team-card.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.team-card.show:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
 }
 /* FOOTER */
 .footer {
@@ -463,7 +574,8 @@ body.dark-mode .icon {
     padding: 22px;
   }
 
-  .value-card {
+  .value-card,
+  .team-card {
     width: 100%;
     max-width: 340px;
   }
