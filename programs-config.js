@@ -10,9 +10,9 @@
 // =====================================================================
 
 // Every application is emailed to brightimpactcommunity@gmail.com through the
-// FormSubmit service. The first time, FormSubmit sends that inbox an activation
-// email: open it and click the confirm link (see the note sent with these files).
-const BIC_FORM_ENDPOINT = "https://formsubmit.co/ajax/brightimpactcommunity@gmail.com";
+// Web3Forms service. BIC_FORM_KEY is the Web3Forms Access Key for that inbox.
+const BIC_FORM_ENDPOINT = "https://api.web3forms.com/submit";
+const BIC_FORM_KEY = "4571b4d2-b263-47a5-8028-8876e571b0ef";
 
 // Video submission settings (Youth Action Program).
 // Leave cloudName and uploadPreset empty to ask applicants for a video LINK instead
@@ -23,8 +23,8 @@ const BIC_PROGRAMS = {
   "youth-action": {
     name: "BIC Youth Action Program",
     status: "auto",
-    opens: "2026-10-30",
-    closes: "2026-11-23",
+    opens: "2026-10-24",
+    closes: "2026-11-14",
     applyLabel: "Apply Now",
     form: "apply.html?program=youth-action"
   },

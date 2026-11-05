@@ -137,7 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
         f.bullets.forEach(b => ul.appendChild(h("li", {}, b)));
         group.appendChild(ul);
       }
-      if (f.words) group.appendChild(h("p", { className: "help" }, "Word limit: " + f.words[0] + "–" + f.words[1] + " words."));
+      if (f.words) group.appendChild(h("p", { className: "help" }, f.words[0] > 0
+        ? "Word limit: " + f.words[0] + "–" + f.words[1] + " words."
+        : "Maximum " + f.words[1] + " words."));
+      if (f.chars) group.appendChild(h("p", { className: "help" }, "Maximum " + f.chars + " characters."));
       if (f.note) group.appendChild(h("p", { className: "help" }, f.note));
 
       if (["text", "email", "tel", "date", "number"].includes(f.type)) {
@@ -154,8 +157,10 @@ document.addEventListener("DOMContentLoaded", function () {
         f.options.forEach(o => sel.appendChild(h("option", { value: o }, o)));
         group.appendChild(sel);
       } else if (f.type === "textarea") {
-        group.appendChild(h("textarea", { id: f.id, name: f.id, rows: f.words ? 9 : 5 }));
-        if (f.words) group.appendChild(h("p", { className: "word-count", id: "count-" + f.id }, "0 words"));
+        const ta = h("textarea", { id: f.id, name: f.id, rows: f.chars ? 3 : (f.words && f.words[1] > 60 ? 9 : 5) });
+        if (f.chars) ta.maxLength = f.chars;
+        group.appendChild(ta);
+        if (f.words || f.chars) group.appendChild(h("p", { className: "word-count", id: "count-" + f.id }, countText(f, "")));
       } else if (f.type === "video") {
         const cfg = BIC_VIDEO_UPLOAD;
         if (cfg && cfg.cloudName && cfg.uploadPreset) {
@@ -252,6 +257,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function wordCount(s) {
     return s.trim() ? s.trim().split(/\s+/).length : 0;
   }
+  function countText(f, s) {
+    if (f.chars) return s.length + " / " + f.chars + " characters";
+    return wordCount(s) + (f.words[0] > 0 ? " words" : " / " + f.words[1] + " words");
+  }
   function ageFrom(dobStr) {
     const d = new Date(dobStr + "T00:00:00");
     const now = new Date();
@@ -283,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (n < f.words[0]) return "Please write at least " + f.words[0] + " words (you have " + n + ").";
       if (n > f.words[1]) return "Please keep this to " + f.words[1] + " words or fewer (you have " + n + ").";
     }
+    if (f.chars && v.length > f.chars) return "Please keep this to " + f.chars + " characters or fewer (you have " + v.length + ").";
     if (f.max && f.type === "checkbox" && v.length > f.max) return "Please select no more than " + f.max + ".";
     return "";
   }
@@ -332,8 +342,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   form.addEventListener("input", function (e) {
     const f = fieldMap[e.target.name];
-    if (f && f.words) {
-      document.getElementById("count-" + f.id).textContent = wordCount(e.target.value) + " words";
+    if (f && (f.words || f.chars)) {
+      document.getElementById("count-" + f.id).textContent = countText(f, e.target.value);
     }
     saveDraft();
   });
@@ -407,7 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           form.elements[f.id].value = v;
         }
-        if (f.words) document.getElementById("count-" + f.id).textContent = wordCount(String(v)) + " words";
+        if (f.words || f.chars) document.getElementById("count-" + f.id).textContent = countText(f, String(v));
         if (f.type === "video" && v) {
           const st = document.getElementById("videostatus-" + f.id);
           if (st) st.textContent = "\u2714 Video already uploaded. Choose a file only if you want to replace it.";
@@ -461,11 +471,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // flat key/value list, which is how the email service shows it
     const payload = {
-      _subject: "New application: " + program.name,
-      _template: "table",
-      _captcha: "false"
+      access_key: BIC_FORM_KEY,
+      subject: "New application: " + program.name,
+      from_name: "BIC Website"
     };
-    if (fieldMap["email"]) payload._replyto = getValue(fieldMap["email"]);
+    if (fieldMap["email"]) payload.replyto = getValue(fieldMap["email"]);
     fields.forEach(f => {
       if (!isVisible(f)) return;
       const v = getValue(f);
