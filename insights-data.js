@@ -39,9 +39,9 @@ const BIC_BLOG = [
     id: "Unsafe Water In Africa",
     title: "The Water We Drink Is Killing Us.",
     author: "Mensi Abigael",
-    role: "Founder at Bright Impact Community",
+    role: "Founder at BIC ",
     date: "2026-11-05",
-    readTime: "5 mins",
+    readTime: "5 mins read",
     image: "images/insights/unsafe-water-blog.jpg",
     excerpt: "The Water We Drink Is Killing Us. So Why Aren't We Louder About It?",
     body: [
