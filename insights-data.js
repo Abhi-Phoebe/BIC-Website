@@ -35,20 +35,25 @@
 // =====================================================================
 
 const BIC_BLOG = [
-  // {
-  //   id: "my-youth-action-journey",
-  //   title: "What the Youth Action Program Taught Me",
-  //   author: "Full Name",
-  //   role: "Youth Action Program participant, 2026",
-  //   date: "2027-03-15",
-  //   tag: "Reflection",
-  //   image: "images/insights/my-youth-action-journey.jpg",
-  //   excerpt: "One or two sentences that make people want to read more.",
-  //   body: [
-  //     "First paragraph of the story.",
-  //     "Second paragraph of the story, with **some words in bold**."
-  //   ]
-  // }
+  {
+    id: "Unsafe Water In Africa",
+    title: "The Water We Drink Is Killing Us.",
+    author: "Mensi Abigael",
+    role: "Founder at Bright Impact Community",
+    date: "2026-11-05",
+    tag: "Reflection",
+    image: "images/insights/unsafe-water-blog.jpg",
+    excerpt: "One or two sentences that make people want to read more.",
+    body: [
+     "Let me ask you something simple. When was the last time you thought twice before drinking a glass of water?
+For a lot of people, the answer is never. You turn a tap, fill a cup, and drink. But for millions of families across Africa, that glass of water is a gamble. Sometimes it's fine. Sometimes it's the reason a child doesn't wake up.
+I know that sounds dramatic. I wish it were.",
+       "**The numbers are hard to look at**
+Let's start with the big picture. The latest WHO and UNICEF report, released in 2025, says 2.1 billion people around the world still don't have safely managed drinking water. That means water at home, available when they need it, and free from contamination. And 106 million of them drink straight from rivers, ponds and streams with no treatment at all.
+And Africa? We're at the bottom of the chart. Sub-Saharan Africa had the lowest access of any region in 2024. In the Central African Republic and Chad, 93% of people lacked safely managed drinking water. Ninety-three percent. Read that again.
+Across the continent, more than 400 million people don't even have a basic water service. In rural areas, four out of every five people lack safely managed drinking water."
+    ]
+  }
 ];
 
 const BIC_SPOTLIGHT = [
