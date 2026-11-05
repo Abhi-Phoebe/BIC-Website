@@ -272,10 +272,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ---------- cards ----------
-  function openBtn(onClick) {
-    const b = el("button", "donate-btn", "Read More");
-    b.addEventListener("click", onClick);
-    return b;
+   function openBtn(kind, id) {
+    const a = el("a", "donate-btn", "Read More");
+    a.href = "Insights.html?read=" + kind + "/" + encodeURIComponent(id);
+    return a;
   }
 
   function blogCard(p) {
@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
     body.appendChild(el("p", "insight-meta", [p.author, fmtDate(p.date)].filter(Boolean).join(" · ")));
     body.appendChild(el("p", "insight-excerpt", p.excerpt));
     body.appendChild(statsLine(keyOf("blog", p.id), true));
-    body.appendChild(openBtn(() => openPost("blog", p.id, true)));
+    body.appendChild(openBtn("blog", p.id));
     card.appendChild(body);
     return card;
   }
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
     body.appendChild(el("p", "insight-meta", p.title));
     if (p.quote) body.appendChild(el("p", "insight-quote", "“" + p.quote + "”"));
     body.appendChild(statsLine(keyOf("spotlight", p.id), false));
-    body.appendChild(openBtn(() => openPost("spotlight", p.id, true)));
+    body.appendChild(openBtn("spotlight", p.id));
     card.appendChild(body);
     return card;
   }
@@ -540,13 +540,12 @@ document.addEventListener("DOMContentLoaded", function () {
       countView(kind, key, wrap);
     }
 
-    modalBody.innerHTML = "";
-    modalBody.appendChild(wrap);
-    modal.hidden = false;
-    document.body.classList.add("modal-open");
-    modalBox.scrollTop = 0;
-    closeBtn.focus();
-    if (updateHash) history.replaceState(null, "", window.location.search + "#" + kind + "/" + id);
+    const page = document.getElementById("read-page");
+    const back = el("a", "back-link", "← Back to " + (kind === "blog" ? "Blog" : "Spotlight"));
+    back.href = "Insights.html#" + kind;
+    page.innerHTML = "";
+    page.append(back, wrap);
+    document.title = (p.title || p.name) + " | Bright Impact Community";
   }
 
   // a view is counted once per device for each story, and only marked as seen once Firebase has accepted it
@@ -584,8 +583,28 @@ document.addEventListener("DOMContentLoaded", function () {
   function applyHash() {
     const parts = window.location.hash.replace("#", "").split("/");
     if (parts[0] === "blog" || parts[0] === "spotlight") {
+      if (parts[1]) { window.location.replace("Insights.html?read=" + parts[0] + "/" + parts[1]); return; }
       showTab(parts[0], false);
-      if (parts[1]) openPost(parts[0], decodeURIComponent(parts[1]), false);
+    }
+  }
+
+  // ---------- story page: Insights.html?read=blog/my-post-id ----------
+  const readParam = new URLSearchParams(window.location.search).get("read");
+  function showReadingPage() {
+    const parts = readParam.split("/");
+    const kind = parts[0];
+    const id = parts.slice(1).join("/");
+    const page = document.getElementById("read-page");
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".insights-tabs").style.display = "none";
+    document.querySelectorAll(".tab-panel").forEach(p => { p.hidden = true; });
+    page.hidden = false;
+    page.innerHTML = "";
+    openPost(kind, id, false);
+    if (!page.children.length) {
+      const back = el("a", "back-link", "← Back to Insights");
+      back.href = "Insights.html";
+      page.append(back, el("p", "", "Sorry, we could not find this story."));
     }
   }
 
@@ -609,15 +628,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   renderAll();
-  applyHash();
-  window.addEventListener("hashchange", applyHash);
+  if (readParam) {
+    showReadingPage();
+  } else {
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+  }
   handleScroll();
   connectStore().then(() => {
     refreshStats();
-    // if a story was opened from a link before the numbers loaded, reopen it with likes and comments
-    if (store && !modal.hidden) {
-      const parts = window.location.hash.replace("#", "").split("/");
-      if (parts[1]) openPost(parts[0], decodeURIComponent(parts[1]), false);
-    }
+    // once likes and comments are ready, show them on the story page
+    if (store && readParam) showReadingPage();
   });
 });
