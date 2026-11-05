@@ -612,7 +612,7 @@ body.dark-mode .insights-wrap {
 }
 
 .insight-excerpt {
-  color: var(--subtitle-color);
+  color: var(--text-color);
 }
 
 .insight-quote {
@@ -740,7 +740,7 @@ body.modal-open {
 }
 
 .insight-detail p {
-  color: var(--subtitle-color);
+  color: var(--text-color);
   margin-bottom: 14px;
 }
 
