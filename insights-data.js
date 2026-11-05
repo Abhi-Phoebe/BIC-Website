@@ -60,7 +60,7 @@ const BIC_BLOG = [
       "**The hidden cost women and girls pay**",
 "There's another side to this crisis that never shows up in the death toll.",
 "In nearly 80% of sub-Saharan African households without water at home, women and girls are the ones who go and fetch it, and a single trip often takes more than 30 minutes. The UN Development Programme estimates that women in sub-Saharan Africa spend around 40 billion hours a year collecting water.",
-"Think about what that means for one girl. She wakes up early, walks to the water point, waits in line, and carries a heavy container home. Maybe she makes that trip twice before school. Maybe she doesn't make it to school at all. Every hour spent fetching water is an hour not spent learning, earning or resting. And the water she carries home might still make her little brother sick."
+"Think about what that means for one girl. She wakes up early, walks to the water point, waits in line, and carries a heavy container home. Maybe she makes that trip twice before school. Maybe she doesn't make it to school at all. Every hour spent fetching water is an hour not spent learning, earning or resting. And the water she carries home might still make her little brother sick.",
       "**So what do we actually do?**",
 "I'm tired of articles that list scary numbers and then end with **something must be done.** So let me be specific.",
 "Governments have to fund it like they mean it. WHO and UNICEF say Africa needs to move 12 times faster on safe drinking water to reach the 2030 goal. That won't happen with small budgets and big speeches. Water needs real money and real accountability.",
