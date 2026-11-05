@@ -11,7 +11,7 @@
 //   author    the person's name
 //   role      optional, e.g. "Youth Action Program participant, 2026"
 //   date      YYYY-MM-DD (newest posts are shown first automatically)
-//   tag       optional small label, e.g. "Reflection"
+//   readTime      put the duration of reading the blog
 //   image     the person's picture, e.g. "images/insights/my-post.jpg"
 //   excerpt   one or two sentences shown on the card
 //   body      the full story: each line inside [ ] is one paragraph
@@ -41,7 +41,7 @@ const BIC_BLOG = [
     author: "Mensi Abigael",
     role: "Founder at Bright Impact Community",
     date: "2026-11-05",
-    tag: "Reflection",
+    readTime: "5 mins",
     image: "images/insights/unsafe-water-blog.jpg",
     excerpt: "The Water We Drink Is Killing Us. So Why Aren't We Louder About It?",
     body: [
