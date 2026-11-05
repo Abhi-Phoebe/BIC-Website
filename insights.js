@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = el("div", "insight-body");
     if (p.tag) body.appendChild(el("span", "insight-tag", p.tag));
     body.appendChild(el("h3", "", p.title));
-    body.appendChild(el("p", "insight-meta", [p.author, fmtDate(p.date)].filter(Boolean).join(" · ")));
+    body.appendChild(el("p", "insight-meta", [p.author, fmtDate(p.date), p.readTime].filter(Boolean).join(" · ")));
     body.appendChild(el("p", "insight-excerpt", p.excerpt));
     body.appendChild(statsLine(keyOf("blog", p.id), true));
     body.appendChild(openBtn("blog", p.id));
@@ -524,7 +524,7 @@ document.addEventListener("DOMContentLoaded", function () {
       wrap.appendChild(media(p.image, p.title, initials(p.author), "fa-solid fa-pen-nib"));
       if (p.tag) wrap.appendChild(el("span", "insight-tag", p.tag));
       wrap.appendChild(el("h2", "", p.title));
-      wrap.appendChild(el("p", "insight-meta", [p.author, p.role, fmtDate(p.date)].filter(Boolean).join(" · ")));
+      wrap.appendChild(el("p", "insight-meta", [p.author, p.role, fmtDate(p.date), p.readTime].filter(Boolean).join(" · ")));
       (p.body || []).forEach(t => wrap.appendChild(richText(el("p"), t)));
     } else {
       wrap.appendChild(media(p.photo, p.name, initials(p.name), "fa-solid fa-star"));
