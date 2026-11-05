@@ -43,7 +43,7 @@ const BIC_BLOG = [
     date: "2026-11-05",
     tag: "Reflection",
     image: "images/insights/unsafe-water-blog.jpg",
-    excerpt: "One or two sentences that make people want to read more.",
+    excerpt: "The Water We Drink Is Killing Us. So Why Aren't We Louder About It?",
     body: [
      "Let me ask you something simple. When was the last time you thought twice before drinking a glass of water?",
 "For a lot of people, the answer is never. You turn a tap, fill a cup, and drink. But for millions of families across Africa, that glass of water is a gamble. Sometimes it's fine. Sometimes it's the reason a child doesn't wake up.",
@@ -51,7 +51,28 @@ const BIC_BLOG = [
        "**The numbers are hard to look at**",
 "Let's start with the big picture. The latest WHO and UNICEF report, released in 2025, says 2.1 billion people around the world still don't have safely managed drinking water. That means water at home, available when they need it, and free from contamination. And 106 million of them drink straight from rivers, ponds and streams with no treatment at all.",
 "And Africa? We're at the bottom of the chart. Sub-Saharan Africa had the lowest access of any region in 2024. In the Central African Republic and Chad, 93% of people lacked safely managed drinking water. Ninety-three percent. Read that again.",
-"Across the continent, more than 400 million people don't even have a basic water service. In rural areas, four out of every five people lack safely managed drinking water."
+"Across the continent, more than 400 million people don't even have a basic water service. In rural areas, four out of every five people lack safely managed drinking water.",
+      "**This isn't just about thirst**",
+"Here's the part that keeps me up at night. Unsafe water doesn't just make life uncomfortable. It kills.",
+"In 2019, unsafe water, sanitation and hygiene were linked to at least 1.4 million deaths worldwide, mostly in Africa and South-East Asia. The WHO estimates that about 510,000 deaths in its African Region could have been prevented with safe water, sanitation and hygiene, and that roughly 73% of all diarrhoeal deaths in the region are tied to these unsafe conditions.",
+"Around the world, 395,000 children under five died in a single year because of unsafe water, sanitation and hygiene. Most of them died from diarrhoea. Diarrhoea! Something we already know how to prevent.",
+"Then there's cholera. Between January 2024 and March 2025, countries in Eastern and Southern Africa reported more than 178,000 cholera cases and nearly 2,900 deaths. Cholera is a disease of dirty water. It should not still be killing people today.",
+      "**The hidden cost women and girls pay**",
+"There's another side to this crisis that never shows up in the death toll.",
+"In nearly 80% of sub-Saharan African households without water at home, women and girls are the ones who go and fetch it, and a single trip often takes more than 30 minutes. The UN Development Programme estimates that women in sub-Saharan Africa spend around 40 billion hours a year collecting water.",
+"Think about what that means for one girl. She wakes up early, walks to the water point, waits in line, and carries a heavy container home. Maybe she makes that trip twice before school. Maybe she doesn't make it to school at all. Every hour spent fetching water is an hour not spent learning, earning or resting. And the water she carries home might still make her little brother sick."
+      "**So what do we actually do?**",
+"I'm tired of articles that list scary numbers and then end with **something must be done.** So let me be specific.",
+"Governments have to fund it like they mean it. WHO and UNICEF say Africa needs to move 12 times faster on safe drinking water to reach the 2030 goal. That won't happen with small budgets and big speeches. Water needs real money and real accountability.",
+"Fix what already exists. Many communities have boreholes and pumps that broke years ago and were never repaired. Maintenance isn't exciting, but a working old pump beats a shiny new one that dies in six months.",
+"Make water safe at home. Boiling, chlorine tablets and simple filters are cheap and they work. Teaching families about home treatment and handwashing can save lives this week, not in 2030.",
+"Put women in the room. The people who carry the water know exactly where the problems are. They should help design the solutions.",
+"Invest because it pays. Every dollar spent on water and sanitation brings back about four dollars through better health and more productive time. This isn't charity. It's one of the smartest investments a country can make.",
+"**What you can do today**",
+"You don't need to be a minister to help. Support local organisations that build and maintain water points. Share accurate information about safe water with your family and neighbours. Ask your local leaders what the plan is for water in your community, and keep asking. Talk about it online. Silence is part of why this problem has lasted so long.",
+"Clean water isn't a luxury. After air, it's the most basic thing a human being needs. The fact that hundreds of millions of Africans still don't have it is not normal, and we should stop treating it like it is.",
+"We have the knowledge. We have the tools. What we need now is the will.",
+"**So let's get loud about it.**"
     ]
   }
 ];
