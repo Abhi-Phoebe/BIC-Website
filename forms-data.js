@@ -23,7 +23,6 @@ const YOUTH_FORM = {
     "You can commit to the full program duration.",
     "You have answered all required questions.",
     "You have completed all three essays in your own words.",
-    "You have added your video (maximum 90 seconds).",
     "Your contact details are correct.",
     "You have read and accepted the required declarations."
   ],
